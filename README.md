@@ -54,5 +54,5 @@ DailyLoginBonus is licensed under the AGPL-3.0 License. See the [LICENSE](https:
 Contributions are welcome! Please open an issue or submit a pull request on GitHub.
 
 ## Acknowledgements
-* [PaperMC](https://papermc.io/software/paper) - The Minecraft proxy server that SpeedTab is built for.
+* [PaperMC](https://papermc.io/software/paper) - The Minecraft server software that DailyLoginBonus is built for.
 * [Vault](https://github.com/milkbowl/Vault) - The economy system used by DailyLoginBonus.

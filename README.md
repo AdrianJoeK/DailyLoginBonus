@@ -14,7 +14,7 @@ DailyLoginBonus is a customizable daily login bonus plugin for the PaperMC serve
 ## Installation
 
 1. Download the latest release of DailyLoginBonus from the [Releases](https://github.com/AdrianJoeK/DailyLoginBonus/releases) page.
-2. Place the downloaded JAR file in the `plugins` directory of your Paper 1.21 server.
+2. Place the downloaded JAR file in the `plugins` directory of your Paper 1.20 - 1.21.1 server.
 3. Start your Paper server to generate the default configuration file.
 
 ## Configuration

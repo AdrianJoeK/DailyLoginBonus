@@ -1,0 +1,7 @@
+name: DailyLoginBonus
+version: '@project.version@'
+main: xyz.adrian_kilgour.dailyloginbonus.DailyLoginBonus
+api-version: '1.21'
+depend: [Vault]
+softdepend: [Essentials]
+author: Adrian Joseph Kilgour

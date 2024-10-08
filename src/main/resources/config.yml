@@ -1,0 +1,4 @@
+baseReward: 5000
+percentageIncrease: 20
+cooldownHours: 12
+streakResetHours: 24

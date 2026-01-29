@@ -67,18 +67,24 @@ public class LoginListener implements Listener {
         }
 
         // Increment the streak as the player has logged in today
-        streak++;
-        config.set("players." + playerUUID + ".streak", streak);
-        config.set("players." + playerUUID + ".lastLogin", currentTime);
-        plugin.saveConfig();
+        int finalStreak = streak + 1;
 
-        // Calculate the reward based on the streak and deposit it into the players account.
-        int reward = getDailyReward(streak);
-        DailyLoginBonus.getEconomy().depositPlayer(player, reward);
+        // Async task for I/O and config updates for Folia compatibility
+        plugin.getServer().getScheduler().runTaskAsynchronously(plugin, () -> {
+            synchronized (plugin) {
+                config.set("players." + playerUUID + ".streak", finalStreak);
+                config.set("players." + playerUUID + ".lastLogin", currentTime);
+                plugin.saveConfig();
+            }
 
-        // Notify the player about their login streak and reward.
-        player.sendMessage("You have logged in for " + streak + " day(s) in a row!");
-        player.sendMessage("You've been awarded " + reward + " currency!");
+            // Calculate the reward based on the streak and deposit it into the players account.
+            int reward = getDailyReward(finalStreak);
+            DailyLoginBonus.getEconomy().depositPlayer(plugin.getServer().getOfflinePlayer(playerUUID), reward);
+
+            // Notify the player about their login streak and reward.
+            player.sendMessage("You have logged in for " + finalStreak + " day(s) in a row!");
+            player.sendMessage("You've been awarded " + reward + " currency!");
+        });
     }
 
     /**

@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-AGPL-blue.svg)](LICENSE)
 
-DailyLoginBonus is a customizable daily login bonus plugin for the PaperMC server software. It allows you to set a custom daily login bonus amount, and the percentage it should increase with the players daily streak.
+DailyLoginBonus is a customizable daily login bonus plugin for the Paper or Folia server software. It allows you to set a custom daily login bonus amount, and the percentage it should increase with the players daily streak.
 
 ## Features
 
@@ -14,7 +14,7 @@ DailyLoginBonus is a customizable daily login bonus plugin for the PaperMC serve
 ## Installation
 
 1. Download the latest release of DailyLoginBonus from the [Releases](https://github.com/AdrianJoeK/DailyLoginBonus/releases) page.
-2. Place the downloaded JAR file in the `plugins` directory of your Paper 1.20 - 1.21.1 server.
+2. Place the downloaded JAR file in the `plugins` directory of your Paper or Folia 1.20 - 1.21.11 server.
 3. Start your Paper server to generate the default configuration file.
 
 ## Configuration
@@ -23,7 +23,7 @@ After running the server for the first time with DailyLoginBonus installed, a de
 
 ### Configuration File
 
-The configuration file `config.yml` allows you to customize the plugin. Here is the default configuration:
+The configuration file `config.yml` allows you to customise the plugin. Here is the default configuration:
 
 ```hocon
 baseReward: 5000
